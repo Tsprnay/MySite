@@ -147,7 +147,7 @@ body {
 
 .spotifyplayer {
   width: 320px;
-  height: 100px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,6 +169,6 @@ body {
 }
 
 .spotifynow img {
-  transform: scale(0.57);
+  transform: scale(0.64);
   border-radius: 20px;
 }
