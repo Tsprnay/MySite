@@ -1,3 +1,8 @@
 # This is source code of my site
 
-Spotify integration: <a href="https://github.com/tthn0/Spotify-Readme"><img src="icons/spotify.png" alt="Spotify Icon" width="32" style="vertical-align: middle; margin: 50px 0 0 10px;"></a>
+<head>
+  <link rel="stylesheet" type="text/css" href="README.css">
+</head>
+
+
+Spotify integration: <a href="https://github.com/tthn0/Spotify-Readme"><img src="icons/spotify.png" alt="Spotify Icon" width="32"></a>
