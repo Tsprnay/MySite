@@ -80,33 +80,3 @@ const spotifyPlayerElement = document.querySelector(".spotifyplayer");
 
 createRandomCircles(rectangleElement);
 createRandomCircles(spotifyPlayerElement);
-
-const player = document.querySelector('.player');
-const audio = player.querySelector('audio');
-const playButton = player.querySelector('.play-button');
-const pauseButton = player.querySelector('.pause-button');
-const rewindButton = player.querySelector('.rewind-button');
-const fastForwardButton = player.querySelector('.fast-forward-button');
-const volumeSlider = player.querySelector('.volume-slider');
-
-function play() {
-  audio.play();
-  pauseButton.classList.remove('hidden');
-  playButton.classList.add('hidden');
-}
-
-function pause() {
-  audio.pause();
-  pauseButton.classList.add('hidden');
-  playButton.classList.remove('hidden');
-}
-
-audio.addEventListener('play', function() {
-  pauseButton.classList.remove('hidden');
-  playButton.classList.add('hidden');
-});
-
-audio.addEventListener('pause', function() {
-  pauseButton.classList.add('hidden');
-  playButton.classList.remove('hidden');
-});
