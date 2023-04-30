@@ -1,7 +1,7 @@
 # This is source code of my site
 
 <head>
-  <link rel="stylesheet" type="text/css" href="README.css">
+  <link rel="stylesheet" type="text/css" href="css/README.css">
 </head>
 
 
