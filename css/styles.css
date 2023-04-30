@@ -135,4 +135,9 @@ body {
 .social-links img {
     width: 32px;
     height: 32px;
+	transition: filter 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+  filter: blur(2px);
 }
