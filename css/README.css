@@ -1,8 +1,0 @@
-a img {
-  vertical-align: middle;
-  margin: 5px 0 0 10px;
-}
-
-a:hover img {
-  filter: blur(3px);
-}
