@@ -37,6 +37,7 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
+	flex-direction: column;
 }
 
 .rectangle {
@@ -53,6 +54,7 @@ body {
     position: relative;
     border-radius: 20px;
     z-index: 0;
+	margin: 10px;
 }
 
 .avatar {
@@ -140,4 +142,32 @@ body {
 
 .social-links img:hover {
   filter: blur(2px);
+}
+
+.spotifyplayer {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.spotifynow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.spotifynow img {
+  transform: scale(0.57);
+  border-radius: 20px;
 }

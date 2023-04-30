@@ -29,10 +29,8 @@ function getRandomPosition(rectangle, size) {
   }
 }
 
-
-
-function createRandomCircle() {
-  const rectangle = document.querySelector(".rectangle");
+function createRandomCircle(rectangleElement) {
+  const rectangle = rectangleElement;
   const circle = document.createElement("div");
   const size = Math.floor(Math.random() * 100) + 10;
   const position = getRandomPosition(rectangle, size);
@@ -63,19 +61,52 @@ function createRandomCircle() {
 
   animation.onfinish = () => {
     circle.remove();
-    createRandomCircle();
+    createRandomCircle(rectangleElement);
   };
 
   rectangle.appendChild(circle);
 }
 
-function createRandomCircles() {
+function createRandomCircles(rectangleElement) {
   const numberOfCircles = Math.floor(Math.random() * 10) + 1;
 
   for (let i = 0; i < numberOfCircles; i++) {
-    createRandomCircle();
+    createRandomCircle(rectangleElement);
   }
 }
 
-createRandomCircles();
+const rectangleElement = document.querySelector(".rectangle");
+const spotifyPlayerElement = document.querySelector(".spotifyplayer");
 
+createRandomCircles(rectangleElement);
+createRandomCircles(spotifyPlayerElement);
+
+const player = document.querySelector('.player');
+const audio = player.querySelector('audio');
+const playButton = player.querySelector('.play-button');
+const pauseButton = player.querySelector('.pause-button');
+const rewindButton = player.querySelector('.rewind-button');
+const fastForwardButton = player.querySelector('.fast-forward-button');
+const volumeSlider = player.querySelector('.volume-slider');
+
+function play() {
+  audio.play();
+  pauseButton.classList.remove('hidden');
+  playButton.classList.add('hidden');
+}
+
+function pause() {
+  audio.pause();
+  pauseButton.classList.add('hidden');
+  playButton.classList.remove('hidden');
+}
+
+audio.addEventListener('play', function() {
+  pauseButton.classList.remove('hidden');
+  playButton.classList.add('hidden');
+});
+
+audio.addEventListener('pause', function() {
+  pauseButton.classList.add('hidden');
+  playButton.classList.remove('hidden');
+});
