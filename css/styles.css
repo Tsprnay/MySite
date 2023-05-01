@@ -37,7 +37,8 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
-	flex-direction: column;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
 }
 
 .rectangle {
@@ -53,7 +54,7 @@ body {
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    z-index: 0;
+    z-index: 1;
 	margin: 10px;
 }
 
@@ -158,7 +159,7 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .spotifynow {
@@ -171,4 +172,138 @@ body {
 .spotifynow img {
   transform: scale(0.64);
   border-radius: 20px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 3px;
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.hide {
+    display: none;
+}
+
+.rectangle-right {
+    width: 400px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #242424;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 0;
+    margin: 10px;
+    left: calc(50% + 161px);
+    opacity: 0;
+    top: 244px;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.rectangle-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.move-left {
+    transform: translateX(-150px);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rectangle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #242424;
+    border-radius: 20px;
+    margin-left: -20px;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    right: -50px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -29px;
+}
+
+.rectangle-button img {
+    width: 32px;
+    height: 32px;
+}
+
+.move-right {
+    transform: translateX(415px);
+}
+
+.hithere {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 0;
+    padding: 25px;
+}
+
+.nometa {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    margin: 0;
+    padding: 25px;
+}
+
+.ayanami {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 160px;
+    left: 25px;
+    margin: 0;
+    border-radius: 20px;
 }

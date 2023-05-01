@@ -77,9 +77,11 @@ function createRandomCircles(rectangleElement) {
 
 const rectangleElement = document.querySelector(".rectangle");
 const spotifyPlayerElement = document.querySelector(".spotifyplayer");
+const rectangle2Element = document.querySelector(".rectangle-right");
 
 createRandomCircles(rectangleElement);
 createRandomCircles(spotifyPlayerElement);
+createRandomCircles(rectangle2Element);
 
 document.addEventListener("DOMContentLoaded", function () {
   const videoFiles = [
@@ -99,4 +101,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   videoElement.appendChild(sourceElement);
   videoElement.load();
+});
+
+const expandButton = document.getElementById('expand-button');
+const arrow = expandButton.querySelector('.arrow');
+const container = document.querySelector('.container');
+const rectangleRight = document.querySelector('.rectangle-right');
+const rectangleButton = document.querySelector('.rectangle-button');
+
+let expanded = false;
+
+expandButton.addEventListener('click', () => {
+  expanded = !expanded;
+  arrow.classList.toggle('rotate');
+  container.classList.toggle('move-left');
+  rectangleRight.classList.toggle('show');
+  rectangleButton.classList.toggle('move-right');
 });
