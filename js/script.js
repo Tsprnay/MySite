@@ -80,3 +80,23 @@ const spotifyPlayerElement = document.querySelector(".spotifyplayer");
 
 createRandomCircles(rectangleElement);
 createRandomCircles(spotifyPlayerElement);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const videoFiles = [
+    "media/video1.mp4",
+    "media/video2.mp4",
+    "media/video3.mp4",
+  ];
+
+  const randomIndex = Math.floor(Math.random() * videoFiles.length);
+  const randomVideoFile = videoFiles[randomIndex];
+
+  const videoElement = document.querySelector(".background-video video");
+  const sourceElement = document.createElement("source");
+
+  sourceElement.setAttribute("src", randomVideoFile);
+  sourceElement.setAttribute("type", "video/mp4");
+
+  videoElement.appendChild(sourceElement);
+  videoElement.load();
+});
