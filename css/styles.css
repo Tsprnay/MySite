@@ -202,7 +202,7 @@ body {
 
 .rectangle-right {
     width: 400px;
-    height: 530px;
+    height: 515px;
     display: flex;
     flex-direction: column;
     justify-content: center;
