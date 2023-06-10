@@ -78,12 +78,9 @@ body {
 }
 
 .discord {
-    font-family: "Roboto", sans-serif;
-    color: white;
-	margin: 0;
-	font-weight: normal;
-	margin-bottom: -10px;
-	margin-top: -25px;
+    height: 24px;
+    width: auto;
+    border-radius: 100px;
 }
 
 .content {
