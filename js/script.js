@@ -89,6 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "media/video2.mp4",
     "media/video3.mp4",
     "media/video4.mp4",
+    "media/video5.mp4",
+    "media/video6.mp4",
   ];
 
   const randomIndex = Math.floor(Math.random() * videoFiles.length);
